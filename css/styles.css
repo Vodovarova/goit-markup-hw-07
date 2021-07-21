@@ -614,7 +614,6 @@ h1 h2 h3 h4 h5 p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 /*------modal settings--------*/
 .modal-form {
   margin-left: 1px;
@@ -658,12 +657,12 @@ h1 h2 h3 h4 h5 p {
   fill: #2196f3;
 }
 
-.input-check-text {
+.input-check__text {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
-.input-check-text .ch-icon-sp {
+.input-check__text .ch-icon-sp {
   width: 16px;
   height: 15px;
   border: 2px solid #000000;
@@ -673,20 +672,20 @@ h1 h2 h3 h4 h5 p {
   align-items: center;
   justify-content: center;
 }
-.checkbox-icon {
+.modal__checkbox--icon {
   fill: #ffffff;
   opacity: 0;
 }
 
-.input-check:checked + .checkbox-icon {
+.input-check:checked + .modal__checkbox--icon {
   opacity: 1;
 }
 
-.text-checkbox-color {
+.modal__checkbox--color-blue {
   color: #2196f3;
 }
 
-.label-text{
+.label-text {
   width: 25px;
   height: 14px;
   font-family: Roboto, sans-serif;
@@ -698,7 +697,7 @@ h1 h2 h3 h4 h5 p {
   margin-bottom: 4px;
 }
 
-.form-field-checkbox {
+.modal__checkbox {
   display: flex;
   font-size: 14px;
   line-height: 24px;
@@ -710,14 +709,14 @@ h1 h2 h3 h4 h5 p {
 .input-wrapper {
   position: relative;
 }
-.input-icon {
+.modal-form__icon {
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.modal__form--comment {
+.modal-form__comment {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.01em;
@@ -731,12 +730,12 @@ h1 h2 h3 h4 h5 p {
   padding: 12px 16px;
   margin: 0 auto;
 }
-.modal__form--comment:hover,
-.modal__form--comment:focus {
+.modal-form__comment:hover,
+.modal-form__comment:focus {
   border-color: #2196f3;
   fill: #2196f3;
 }
-.modal__form--comment::placeholder {
+.modal-form__comment::placeholder {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   line-height: 1.16;
@@ -745,7 +744,7 @@ h1 h2 h3 h4 h5 p {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-btn {
+.modal__btn--send {
   width: 200px;
   height: 50px;
   font-size: 16px;
@@ -762,15 +761,13 @@ h1 h2 h3 h4 h5 p {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
-
 }
-.modal-btn:hover,
-.modal-btn:focus {
+.modal__btn--send:hover,
+.modal__btn--send:focus {
   background-color: #188ce8;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 /*--------------------------------PORTFOLIO---------------------------------*/
 
@@ -788,7 +785,7 @@ h1 h2 h3 h4 h5 p {
   justify-content: center;
 }
 
-.filters-btn {
+.filters__btn {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -806,44 +803,38 @@ h1 h2 h3 h4 h5 p {
   justify-content: space-between;
 }
 
-.filters-btn:hover,
-.filters-btn:focus {
+.filters__btn:hover,
+.filters__btn:focus {
   background-color: #2196f3;
   color: #ffffff;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .filters-btn:focus */
 
-.filter-vse {
+.filters__btn--vse {
   width: 73px;
   height: 38px;
 }
 
-.filter-vebsites {
+.filters__btn--vebsites {
   width: 128px;
   height: 38px;
 }
-.filter-prilojeniya {
+.filters__btn--prilojeniya {
   width: 145px;
   height: 38px;
 }
-.filter-design {
+.filters__btn--design {
   width: 103px;
   height: 38px;
 }
-.filter-marketing {
+.filters__btn--marketing {
   width: 130px;
   height: 38px;
 }
 /*----------------------------------------projects------------------------------------------*/
 
-.main-box {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.projects-list {
+.projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -851,8 +842,12 @@ h1 h2 h3 h4 h5 p {
 
 .catalogue {
   margin-bottom: 64px;
-} /*because bottom project items is 30px(needed 94px summary between THAT'S A MOTHERFCKING MATH!!!))))))))*/
-.projects-item {
+} /* because bottom project items is 30px(needed 94px summary between THAT'S A MOTHERFCKING MATH!!!)))))))) */
+/* .projects:nth-last-child(-n+3){
+  margin-bottom: 64px;
+} */
+
+.projects__item {
   width: 370px;
   height: 404px;
   box-sizing: border-box;
@@ -860,11 +855,44 @@ h1 h2 h3 h4 h5 p {
   border: 1px solid #eeeeee;
   margin-bottom: 30px;
 }
-.projects-animation {
+/* .projects__item:nth-last-child(-n+3){
+  margin-bottom:0;
+} */
+.projects__item--title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+
+  margin-top: 14px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 4px;
+  width: 322px;
+  height: 36px;
+}
+
+.projects__item--text {
+  width: 322px;
+  height: 30px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
+
+  margin: 0 24px 20px 24px;
+}
+.projects__item--animation {
   position: relative;
   overflow: hidden;
 }
-.card-active-text {
+.projects__item--animation-text {
   position: absolute;
   margin: 0;
   box-sizing: border-box;
@@ -882,15 +910,15 @@ h1 h2 h3 h4 h5 p {
   transform: translateY(100%);
 }
 
-.projects-item:hover .card-active-text,
-.projects-item:focus .card-active-text {
+.projects__item:hover .projects__item--animation-text,
+.projects__item:focus .projects__item--animation-text {
   cursor: pointer;
   transform: translateY(0%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-item:hover,
-.projects-item:focus {
+.projects__item:hover,
+.projects__item:focus {
   cursor: pointer;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -898,35 +926,3 @@ h1 h2 h3 h4 h5 p {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.projects-item-title {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: #212121;
-
-  margin-top: 14px;
-  margin-left: 24px;
-  margin-right: 24px;
-  margin-bottom: 4px;
-  width: 322px;
-  height: 36px;
-}
-
-.projects-item-text {
-  width: 322px;
-  height: 30px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  color: #757575;
-
-  margin: 0 24px 20px 24px;
-}
-/*lang="en"
