@@ -1,0 +1,29 @@
+footer {
+  background: #2f303a;
+}
+
+.footer-bg {
+  padding: 60px 0;
+  display: flex;
+  // @media screen and (min-width: 320px) and (max-width: 768px) {
+  //   flex-direction: column;
+  //   text-align: center;
+  // }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // flex-direction: column;
+    // text-align: center;
+    justify-content: space-between;
+  }
+}
+
+.footer--left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
